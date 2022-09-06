@@ -1,6 +1,7 @@
 import React from "react";
-import {View, Text, TextInput, Button, Image} from "react-native";
+import {View, Text, TextInput, Image, TouchableOpacity} from "react-native";
 import styles from "./styles";
+
 
 export default function TelaLogin() {
     return (
@@ -16,7 +17,13 @@ export default function TelaLogin() {
                 //value={username}
                 secureTextEntry={true}
                 placeholder="Digite sua senha"></TextInput>
-                <Button title="Entrar"></Button>           
+                <TouchableOpacity style={styles.bntEntrar}>
+                    <Text style={styles.TextBntEntrar}>Entrar</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.textRecSenha}>Esqueceu a senha ?</Text>
+                </TouchableOpacity>
+                <Text style={styles.textCopy}>Desenvolvido por equipe</Text>
         </View>
     );
 }
